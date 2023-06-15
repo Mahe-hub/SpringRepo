@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee confirmation exist</title>
+</head>
+<body>
+	<h1> The employee <span th:text="${exist.firstname}"></span> exist</h1>
+	<div>
+		<h2>Employee details</h2>
+			<ul>
+			 <li>Last name :<span th:text="${exist.lastname}"></span></li>
+			 <li>state :<span th:text="${exist.state}"></span></li>
+			 <li>country:<span th:text="${exist.country}"></span></li>
+			</ul>
+    </div>
+</body>
+</html>

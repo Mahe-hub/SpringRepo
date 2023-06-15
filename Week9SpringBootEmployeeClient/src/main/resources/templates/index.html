@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<nav>
+  <div>
+  	<ul>
+  	    <li><a th:href="@{/listEmployee}">List Employee</a></li>
+  		<li><a th:href="@{/createEmployee}">Create Employee</a></li>
+  		<li><a th:href="@{/searchEmployee}">Search Employee</a></li>
+  	</ul>
+  </div>
+ </nav>
+ <p th:text="${errormessage}"></p>
+
+
+</body>
+</html>

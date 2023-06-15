@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to update Employee page </title>
+</head>
+<body>
+ <form th:action="@{/processUpdate}" method="post" th:object="${update}">
+  
+		   <label> Id 
+		   	<input type="text" th:field="*{id}" readonly/>
+		  </label>
+	  
+	  
+		   <label> first name 
+		   	<input type="text" th:field="*{firstname}"/>
+		  </label>
+	  
+		  <label>last name
+		   <input type="text" th:field="*{lastname}"/>
+		  </label>
+	 
+		  <label>salary
+		   <input type="number" th:field="*{salary}"/>
+		  </label>
+	 
+		  <label>state
+		   <input type="text" th:field="*{state}" readonly/>
+		  </label>
+	  
+		  <label>country
+		   <input type="text" th:field="*{country}" readonly/>
+		  </label>
+	    
+  
+  <input type="submit" value="update employee"/>
+ </form>
+</body>
+</html>

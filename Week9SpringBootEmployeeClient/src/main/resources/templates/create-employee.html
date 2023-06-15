@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to Create Employee form</title>
+</head>
+<body>
+ <form th:action="@{/process}" method="post" th:object="${employee}">
+  <label> first name 
+   	<input type="text" th:field="*{firstname}" >
+   	</label>
+    <p th:if="${#fields.hasErrors('firstname')}">First Name Error</p>
+  <label>last name
+   <input type="text" th:field="*{lastname}" >
+  </label>
+   <p th:if="${#fields.hasErrors('lastname')}">Last Name Error</p>
+  <label>salary
+   <input type="number" th:field="*{salary}" >
+  </label>
+  <label>state
+   <input type="text" th:field="*{state}" >
+  </label>
+  <p th:if="${#fields.hasErrors('state')}">State Error</p>
+  <label>country
+   <input type="text" th:field="*{country}" >
+  </label>
+  <p th:if="${#fields.hasErrors('country')}">Country Error</p>
+  <input type="submit" value="add employee" >
+ </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>New Employee information</title>
+</head>
+<body>
+
+ <h1>Employee <span th:text="${newEmployee.firstname}"></span> info</h1>
+ 	<div>
+ 	 <ul>
+	 	  <li>Last Name : <span th:text="${newEmployee.lastname}"></span></li>
+	 	  <li>salary    : <span th:text="${newEmployee.salary}"></span></li>
+	 	  <li>state		: <span th:text="${newEmployee.state}"></span></li>
+	 	  <li>country	: <span th:text="${newEmployee.country}"></span></li>
+ 	 </ul>
+ 	</div>
+ 
+</body>
+</html>
